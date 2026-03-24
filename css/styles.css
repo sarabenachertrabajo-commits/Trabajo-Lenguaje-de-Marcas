@@ -159,6 +159,92 @@ h3::after{
    MEDIA QUERIES
    Añade a partir de aquí tus reglas @media para "rescatar" la web.
    ========================================================================== */
+
+
+/* =========================================================
+   PARTE DE SARA: ESTILOS PARA MÓVILES (max-width: 768px)
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Eliminar anchos fijos que rompen el móvil */
+    body {
+        min-width: 100%;
+        padding: 10px;
+    }
+
+    /* Header en columna */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Menú hamburguesa */
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #3f4eaf;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .main-nav::before {
+        content: "\2630";
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+        text-align: right;
+        padding: 10px;
+    }
+
+    .main-nav:hover ul {
+        display: flex;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Main en una sola columna */
+    main {
+        width: 100%;
+        float: none;
+        margin: 20px 0;
+        padding: 20px;
+    }
+
+    /* Aside debajo del main */
+    aside {
+        width: 100%;
+        float: none;
+        margin: 20px 0;
+    }
+
+    /* Imágenes fluidas */
+    .responsive-img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Footer en columna */
+    footer {
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .footer-col {
+        width: 100%;
+        border-right: none;
+    }
+}
+
+
 /* =========================================================
    PARTE DE VICENTE: ESTILOS PARA PANTALLAS GRANDES (1024px)
    ========================================================= */
