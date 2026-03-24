@@ -159,9 +159,112 @@ h3::after{
    MEDIA QUERIES
    Añade a partir de aquí tus reglas @media para "rescatar" la web.
    ========================================================================== */
+/* =========================================================
+   PARTE DE VICENTE: ESTILOS PARA PANTALLAS GRANDES (1024px)
+   ========================================================= */
+
 @media screen and  (min-width: 1024px){
     body{
         max-width: 1400px; /*Evitamos que con pantallas exageradamente grandes, el contenido se expanda demasiado*/
         margin: 0 auto;
+    }
+}
+/* =========================================================
+   PARTE DE IHSSANE: ESTILOS PARA TABLET (768px a 1024px)
+   ========================================================= */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    /* 1. Resetear el ancho fijo del body para que no salga scroll lateral */
+    body {
+        min-width: 100%; 
+        font-size: 16px;
+        display: block; 
+    }
+
+    /* 2. Ajustar Header */
+    header {
+        padding: 10px 20px;
+        height: auto;
+    }
+
+    /* 3. Ajustar Main y Aside para que quepan juntos (2 columnas) */
+    main {
+        width: 60%;
+        float: left;     
+        margin: 20px 2%;
+        padding: 20px;
+    }
+
+    aside {
+        width: 30%; 
+        float: right; 
+        margin: 20px 2%;
+    }
+
+    /* 4. Imágenes fluidas (Crucial para que no se corten) */
+    .responsive-img {
+        max-width: 100%;   
+        height: auto;
+        display: block;
+    }
+
+    /* 5. Ajuste del Footer (2 columnas en tablet) */
+    footer {
+        width: 100%;       
+        clear: both;
+        display: flex;
+        flex-wrap: wrap;   
+        padding: 20px;
+    }
+
+    .footer-col {
+        width: 50%;        
+        border-right: none;
+        margin-bottom: 20px;
+    }
+
+    /* 6. Tipografía */
+    h1 {
+        font-size: 1.6rem;
+    }
+}
+/*cambiar el menu para móviles*/
+@media screen and (max-width: 768px) {
+    footer{
+        bottom: 0%;
+    }
+    header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+        position: relative;
+    }
+
+    .main-nav ul {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #3f4eaf;
+        padding: 20px 0;
+    }
+
+    .main-nav::before {
+        align-self: left;
+        content: "\2630";
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+        text-align: right;
+        padding: 10px;
+    }
+    .main-nav:hover ul {
+        display: flex;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
     }
 }
