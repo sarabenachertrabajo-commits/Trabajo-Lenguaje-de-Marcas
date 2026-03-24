@@ -159,3 +159,9 @@ h3::after{
    MEDIA QUERIES
    Añade a partir de aquí tus reglas @media para "rescatar" la web.
    ========================================================================== */
+@media screen and  (min-width: 1024px){
+    body{
+        max-width: 1400px; /*Evitamos que con pantallas exageradamente grandes, el contenido se expanda demasiado*/
+        margin: 0 auto;
+    }
+}
