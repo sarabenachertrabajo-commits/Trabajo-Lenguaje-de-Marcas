@@ -259,60 +259,51 @@ h3::after{
    PARTE DE IHSSANE: ESTILOS PARA TABLET (768px a 1024px)
    ========================================================= */
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    
-    /* 1. Resetear el ancho fijo del body para que no salga scroll lateral */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
     body {
-        min-width: 100%; 
+        min-width: 100%;
         font-size: 16px;
-        display: block; 
     }
 
-    /* 2. Ajustar Header */
     header {
-        padding: 10px 20px;
+        padding: 15px 30px;
         height: auto;
     }
 
-    /* 3. Ajustar Main y Aside para que quepan juntos (2 columnas) */
     main {
-        width: 60%;
-        float: left;     
-        margin: 20px 2%;
-        padding: 20px;
+        width: 62%;
+        float: left;
+        margin: 25px 2%;
+        padding: 25px;
     }
 
     aside {
-        width: 30%; 
-        float: right; 
-        margin: 20px 2%;
+        width: 30%;
+        float: right;
+        margin: 25px 2%;
     }
 
-    /* 4. Imágenes fluidas (Crucial para que no se corten) */
     .responsive-img {
-        max-width: 100%;   
+        max-width: 100%;
         height: auto;
         display: block;
     }
 
-    /* 5. Ajuste del Footer (2 columnas en tablet) */
     footer {
-        width: 100%;       
-        clear: both;
-        display: flex;
-        flex-wrap: wrap;   
-        padding: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 30px 20px;
     }
 
     .footer-col {
-        width: 50%;        
+        width: 50%;
         border-right: none;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
-    /* 6. Tipografía */
     h1 {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 }
 /*cambiar el menu para móviles*/
